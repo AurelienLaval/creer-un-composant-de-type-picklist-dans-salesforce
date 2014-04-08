@@ -1,0 +1,21 @@
+<apex:page controller="TrackExtension">
+    <apex:form >
+        <table>
+        	<tr>
+        		<th>Nom : </th>
+        		<td><apex:inputField value="{!track.Name}" /></td>
+        	</tr>
+        	<tr>
+        		<th>Prix : </th>
+        		<td><apex:inputField value="{!track.Price__c}" /></td>
+        	</tr>
+        	<tr>
+        		<th>Album : </th>
+        		<td><c:trackComponent instance="{!picklistController}" rendered="true"/></td>
+        	</tr>
+        	<tr>
+        		<td colspan="2"><apex:commandButton action="{!save}" value="Save" /></td>
+        	</tr>
+        </table>        
+    </apex:form>
+</apex:page>

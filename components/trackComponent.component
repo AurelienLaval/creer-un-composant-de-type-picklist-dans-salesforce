@@ -1,0 +1,9 @@
+<apex:component controller="PicklistController">
+	
+	<apex:attribute name="instance" assignTo="{!picklistController}" required="true" type="PicklistController" description="" />
+    
+    <apex:selectList value="{!picklistController.value}" size="1">
+        <apex:selectOptions value="{!picklistController.albums}"></apex:selectOptions>
+    </apex:selectList>
+    
+</apex:component>
